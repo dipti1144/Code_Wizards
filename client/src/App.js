@@ -5,7 +5,11 @@ import './App.css';
 import Chat from './components/Chat_there/Chatthere';
 import Home from './pages/Home';
 import Button from './components/Button';
+
+import Result from './pages/Result';
+
 import Room from './pages/Room';
+
 
 
 
@@ -16,6 +20,11 @@ function App() {
     <div className="App">
 
      {/* <Button/>  */}
+     <Result/>
+
+
+     {/* <Button/>  */}
+
      {/* <Chat/> */}
      <Room/>
 
