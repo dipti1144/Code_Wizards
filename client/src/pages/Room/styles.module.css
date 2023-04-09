@@ -1,18 +1,33 @@
-/* .background_img {
-  @apply absolute top-0 left-0 w-full h-full object-cover z-0;
+.background_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .win_img {
-  @apply absolute w-64 right-1/2 transform -translate-x-1/2 translate-y-16 rotate-15;
+  position: absolute;
+  width: 250px;
+  right: calc(50% - 125px);
   top: 170px;
+  transform: rotate(15deg);
 }
 
 .lose_img {
-  @apply absolute w-64 right-1/2 transform -translate-x-1/2 translate-y-16 rotate-15;
+  position: absolute;
+  width: 250px;
+  right: calc(50% - 125px);
   top: 170px;
+  transform: rotate(15deg);
 }
 
 .boom_img {
-  @apply absolute w-68 right-1/2 transform -translate-x-1/2 translate-y-20 rotate-15;
+  position: absolute;
+  width: 260px;
+  right: calc(50% - 130px);
   top: 180px;
-} */
+  transform: rotate(15deg);
+}
