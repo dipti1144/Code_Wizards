@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Room from "./pages/Room";
 import Result from "./pages/Result";
+import Chat from "./components/Chat_there/Chatthere";
 import background_img from "./images/background.png";
 import "./App.css";
 
@@ -18,6 +19,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/room/:id" element={<Room />} />
+          {/* <Route path="/chat" element={<Chat/>} /> */}
           <Route path="/result" element={<Result />} />
         </Routes>
       </div>
