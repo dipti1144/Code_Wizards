@@ -4,6 +4,7 @@ import rock_right_hand_img from "../../images/rock_right_hand.png";
 import paper_right_hand_img from "../../images/paper_right_hand.png";
 import scissors_right_hand_img from "../../images/scissors_right_hand.png";
 
+
 function Controls() {
   const [option, setOption] = useState("");
   const { socket, room } = useContext(SocketContext);
