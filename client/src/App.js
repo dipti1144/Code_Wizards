@@ -13,9 +13,9 @@ function App() {
   const socket = io.connect("http://localhost:8080")
   return (
     <div className="App">
-    {/* <Home/> */}
+    <Home/>
      {/* <Chat/> */}
-     <Button/>
+     {/* <Button/> */}
     </div>
   );
 }
