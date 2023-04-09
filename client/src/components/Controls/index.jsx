@@ -3,7 +3,7 @@ import { SocketContext } from "../../context/SocketContext";
 import rock_right_hand_img from "../../images/rock_right_hand.png";
 import paper_right_hand_img from "../../images/paper_right_hand.png";
 import scissors_right_hand_img from "../../images/scissors_right_hand.png";
-
+import styles from "./styles.module.css";
 
 function Controls() {
   const [option, setOption] = useState("");
@@ -25,21 +25,56 @@ function Controls() {
   };
 
   return (
-    <div class="absolute w-260 flex justify-between bottom-30 left-1/2 transform -translate-x-1/2">
-  <button onClick={handleChange} value="rock"  disabled={room.players[socket.id].optionLock} class="w-60 h-60 border-4 border-white rounded-lg bg-black overflow-hidden flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110 focus:outline-none">
-    <img  src={rock_right_hand_img}  alt="rock_hand" class="w-60 transform rotate-90 -mb-10" />
-  </button>
-  <button  disabled={room.players[socket.id].optionLock}
+    <div className={styles.container}>
+      <button
+        disabled={room.players[socket.id].optionLock}
+        className={
+          option === "rock"
+            ? `${styles.option_btn} ${styles.option_btn_active}`
+            : styles.option_btn
+        }
         onClick={handleChange}
-        value="paper" class="w-60 h-60 border-4 border-white rounded-lg bg-black overflow-hidden flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110 focus:outline-none">
-    <img src={paper_right_hand_img}  alt="rock_hand" class="w-60 transform rotate-90 -mb-10" />
-  </button>
-  <button   disabled={room.players[socket.id].optionLock}
+        value="rock"
+      >
+        <img
+          src={rock_right_hand_img}
+          alt="rock_hand"
+          className={styles.option_btn_img}
+        />
+      </button>
+      <button
+        disabled={room.players[socket.id].optionLock}
+        className={
+          option === "paper"
+            ? `${styles.option_btn} ${styles.option_btn_active}`
+            : styles.option_btn
+        }
         onClick={handleChange}
-        value="scissors" class="w-60 h-60 border-4 border-white rounded-lg bg-black overflow-hidden flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110 focus:outline-none">
-    <img  src={scissors_right_hand_img}  alt="rock_hand" class="w-60 transform rotate-90 -mb-10" />
-  </button>
-</div>
+        value="paper"
+      >
+        <img
+          src={paper_right_hand_img}
+          alt="rock_hand"
+          className={styles.option_btn_img}
+        />
+      </button>
+      <button
+        disabled={room.players[socket.id].optionLock}
+        className={
+          option === "scissors"
+            ? `${styles.option_btn} ${styles.option_btn_active}`
+            : styles.option_btn
+        }
+        onClick={handleChange}
+        value="scissors"
+      >
+        <img
+          src={scissors_right_hand_img}
+          alt="rock_hand"
+          className={styles.option_btn_img}
+        />
+      </button>
+    </div>
   );
 }
 
