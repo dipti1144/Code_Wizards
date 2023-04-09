@@ -1,0 +1,18 @@
+/* .background_img {
+  @apply absolute top-0 left-0 w-full h-full object-cover z-0;
+}
+
+.win_img {
+  @apply absolute w-64 right-1/2 transform -translate-x-1/2 translate-y-16 rotate-15;
+  top: 170px;
+}
+
+.lose_img {
+  @apply absolute w-64 right-1/2 transform -translate-x-1/2 translate-y-16 rotate-15;
+  top: 170px;
+}
+
+.boom_img {
+  @apply absolute w-68 right-1/2 transform -translate-x-1/2 translate-y-20 rotate-15;
+  top: 180px;
+} */

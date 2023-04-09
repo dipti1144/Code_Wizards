@@ -4,13 +4,15 @@ import {nanoid} from "nanoid"
 import './App.css';
 import Chat from './components/Chat_there/Chatthere';
 import Button from './components/Button';
+import Room from './pages/Room';
 
 function App() {
   const socket = io.connect("http://localhost:8080")
   return (
     <div className="App">
-     <Button/> 
+     {/* <Button/>  */}
      {/* <Chat/> */}
+     <Room/>
     </div>
   );
 }
