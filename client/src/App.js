@@ -1,35 +1,27 @@
-import logo from './logo.svg';
-import io from "socket.io-client"
-import {nanoid} from "nanoid"
-import './App.css';
-import Chat from './components/Chat_there/Chatthere';
-import Home from './pages/Home';
-import Button from './components/Button';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Room from "./pages/Room";
+import Result from "./pages/Result";
+import background_img from "./images/background.png";
+import "./App.css";
 
-import Result from './pages/Result';
-
-import Room from './pages/Room';
-
-
-
-
-
-function App() {
-  const socket = io.connect("http://localhost:8080")
+const App = () => {
   return (
-    <div className="App">
-
-     {/* <Button/>  */}
-     <Result/>
-
-
-     {/* <Button/>  */}
-
-     {/* <Chat/> */}
-     <Room/>
-
-    </div>
+    <main className="main">
+      <img
+        src={background_img}
+        className="background_img"
+        alt="background img"
+      />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/room/:id" element={<Room />} />
+          <Route path="/result" element={<Result />} />
+        </Routes>
+      </div>
+    </main>
   );
-}
+};
 
 export default App;

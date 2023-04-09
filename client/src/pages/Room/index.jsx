@@ -1,14 +1,14 @@
 import { useEffect, useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { SocketContext } from "../../context/SocketContext";
-import PlayerOne from "../../components/playerOne";
-import PlayerTwo from "../..//components/playerTwo";
+import PlayerOne from "../../components/playerOne"
+import PlayerTwo from "../../components/playerTwo";
 import Controls from "../../components/Controls";
 import vs_img from "../../images/vs.jpg";
 import win_img from "../../images/win.png";
 import lose_img from "../../images/lose.png";
 import boom_img from "../../images/boom.png";
-// import styles from "./styles.module.css";
+import styles from "./styles.module.css";
 
 const Room = () => {
   const [result, setResult] = useState({
@@ -105,21 +105,18 @@ const Room = () => {
 
   return (
     <>
-      <img src={vs_img} alt="vs" class="absolute top-0 left-0 w-full h-full object-cover z-0" />
+      <img src={vs_img} alt="vs" className={styles.background_img} />
       <PlayerOne result={result} />
       <PlayerTwo result={result} />
       {player_2 && <Controls />}
       {resultText === "win" && (
-        <img src={win_img} alt="win_img" class="absolute w-64 right-1/2 transform -translate-x-1/2 translate-y-16 rotate-15;
-        top: 170px" />
+        <img src={win_img} alt="win_img" className={styles.win_img} />
       )}
       {resultText === "lose" && (
-        <img src={lose_img} alt="lose_img" class="absolute w-64 right-1/2 transform -translate-x-1/2 translate-y-16 rotate-15;
-        top: 170px;" />
+        <img src={lose_img} alt="lose_img" className={styles.lose_img} />
       )}
       {resultText === "tie" && (
-        <img src={boom_img} alt="boom_img" class="absolute w-68 right-1/2 transform -translate-x-1/2 translate-y-20 rotate-15;
-        top: 180px" />
+        <img src={boom_img} alt="boom_img" className={styles.boom_img} />
       )}
     </>
   );
