@@ -31,4 +31,4 @@ const JoinLink = ({ link }) => {
   );
 };
 
-export default JoinLink;
+export default JoinLink
