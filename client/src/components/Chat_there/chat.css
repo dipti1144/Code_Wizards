@@ -1,0 +1,61 @@
+.chatheading {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #008CBA;
+  }
+  
+  .chatcontainer {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .chatmessage {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .chatusername {
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+
+  }
+  
+  .chatform {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chatinput {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    margin-right: 8px;
+  }
+  
+  .chatsendbutton {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #008CBA;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .chatsendbutton:hover {
+    background-color: #005F6B;
+  }
+  
